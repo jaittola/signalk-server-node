@@ -14,36 +14,18 @@
 	}
     },
 
-    "interfaces": {
-        "bower": false,
-        "rest": true,
-        "ws": true,
-        "beaglek": true
-    },
+    "interfaces": [
+        "rest",
+        "bower",
+        "ws",
+        "beaglek"
+    ],
 
     "pipedProviders": [{
-        "id": "nmeaFromFile",
+        "id": "n2kFromFile",
         "pipeElements": [
             {
-                "type": "providers/filestream",
-                "options": {
-                    "filename": "samples/plaka2.log"
-                },
-                "optionMappings": [
-                    {
-                        "fromAppProperty": "argv.nmeafilename",
-                        "toOption": "filename"
-                    }
-                ]
-            },
-            {
-                "type": "providers/throttle",
-                "options": {
-                    "rate": 500
-                }
-            },
-            {
-                "type": "providers/liner"
+                "type": "providers/gpsd"
             },
             {
                 "type": "providers/nmea0183-signalk",
