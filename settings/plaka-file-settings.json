@@ -27,7 +27,7 @@
             {
                 "type": "providers/filestream",
                 "options": {
-                    "filename": "samples/plaka2.log"
+                    "filename": "samples/plaka-hogskar-suomenlinna.log"
                 },
                 "optionMappings": [
                     {
